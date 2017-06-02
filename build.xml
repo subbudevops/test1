@@ -1,0 +1,14 @@
+<project name="AntPractice" default="compile">
+<target name="clean">
+<delete dir="output/classes"/>
+<delete dir="destionation"/>
+<delete dir="source/classes"/>
+</target>
+<target name="init" depends="clean">
+<mkdir dir="source"/>
+<mkdir dir="output/classes"/>
+</target>
+<target name="compile" depends="init">
+<javac srcdir="." destdir="output/classes"/>
+</target>
+</project>
